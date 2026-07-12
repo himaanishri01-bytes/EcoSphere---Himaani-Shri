@@ -1,0 +1,36 @@
+Build a complete, professional, and visually stunning interactive corporate ESG and Gamification platform called "EcoSphere". This is a high-stakes hackathon project that must be fully operational as a Progressive Web App (PWA) styled to look and feel like a premium mobile app (optimized for mobile viewport dimensions with a centered mobile-app frame layout on desktop). 
+
+The application must be fully functional in the frontend with interactive React states, highly polished micro-interactions, animations, and robust conditional business logic. Follow these exact specifications to ensure a top-ranked submission:
+
+1. MOBILE-FIRST UI & VISUAL STYLE (DARK NATURE-TECH AESTHETIC)
+- Frame: Restrict the app viewport container to a premium mobile device frame (max-width: 440px) centered on the screen with a subtle outer glow, making it look like a live mobile app.
+- Background: A rich, multi-shade gradient flowing from Deep Forest Green (#0B3C26) to Emerald Green (#059669) down to a premium Tech Midnight Blue (#0A192F).
+- Animations: Add subtle floating CSS/SVG elements like leaves and water droplets smoothly drifting in the background canvas using custom Tailwind/CSS keyframe animations.
+- Cards: Implement premium glassmorphism styling using heavy backdrop blur (backdrop-blur-xl), dark slate overlays (bg-slate-900/50), and glowing green/teal borders.
+- Buttons & Interactivity: Ditch monotone all-green buttons. Primary interactive CTAs must use high-contrast Electric Teal (#00FFD1) or Electric Blue (#0070F3). Administrative danger actions (like Ban) must use Coral Red (#FF4D4D).
+- Micro-Interactions: Every interactive button must smoothly enlarge, compress slightly on click, and intensify its glow on hover (use transition-all duration-300, hover:scale-105, active:scale-95, hover:shadow-lg).
+
+2. AUTHENTICATION & PORTAL ROUTING
+- Create a clean landing screen with an organization-wide impact hero dashboard metric: "456 Trees Saved | 8,420 Watts Saved | 3.4 Tons CO2 Avoided".
+- Provide a responsive Login/Sign-up sheet sliding up from the bottom with a clear, functional role selection toggle between "Employee" and "Manager (Superior)".
+- Based on the selection, route the interface dynamically to either the Employee Dashboard view or the Manager Dashboard view. Do not mix their views.
+
+3. ROBUST STATE-DRIVEN MOCK DATA
+- Inject a local React state initialized with an array of 20 realistic corporate users with diverse metrics (XP ranging from 150 to 2500, active streaks from 0 to 14 days, and statuses of "Active", "Suspect", or "Banned"). 
+
+4. EMPLOYEE PORTAL FEATURES
+- Profile Header: Displays avatar, current level badge, interactive XP progress bar, and a glowing streak counter flame icon.
+- Premium Contribution Dropzone: Replace generic file inputs with a beautiful, custom drag-and-drop box featuring a dashed neon-teal border. Include a simulated file selection function that automatically generates a visual photo-evidence thumbnail preview once an item is loaded.
+- Top 10 Leaderboard: Displays the top 10 scoring users dynamically filtered to exclude anyone with a "Banned" status. Rank medals should use gold, silver, and bronze accent highlights.
+- Activity Tab & Badges: A vertical scrolling log of past actions and a grid displaying unlocked vs grayed-out milestone achievements.
+
+5. MANAGER PORTAL FEATURES & REAL-TIME BUSINESS LOGIC
+- Workforce Overview: A clean mobile-optimized card-list directory tracking all 20 users, their current XP, status, and a "Suspect Count" metric (out of 5).
+- Pending Review Queue: Showcase a photo-evidence card detailing a submission (e.g., "Recycled 3 papers").
+- State-Driven Action Controls: Wire up the following fully functional button handlers that update the main state array in real time:
+  a) APPROVE: Increases global organization stats and awards full XP to that user profile.
+  b) REJECT/CANCEL: Awards 0 XP and increments the user's suspect count by 1.
+  c) FLAG SUSPECT (-15%): Instantly reduces that specific user's total cumulative XP by 15% (Formula: New_XP = Current_XP * 0.85) and increments their suspect count by 1.
+  d) BAN: Automatically switches the user's status to "Banned", locks their submission capabilities completely, and dynamically strips them from the active Top 10 Leaderboard.
+
+Generate the clean modular components, hook them together perfectly inside App.jsx, ensure all Tailwind configuration rules are applied, and launch the server immediately.
